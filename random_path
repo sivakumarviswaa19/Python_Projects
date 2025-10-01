@@ -1,0 +1,32 @@
+
+import turtle 
+
+import random
+tim=turtle.Turtle()
+tim.shape("turtle")
+tim.speed("fastest")
+
+turtle.colormode(255)
+def random_color():
+    r=random.randint(0,255)
+    g=random.randint(0,255)
+    b=random.randint(0,255)
+    t=(r,g,b)
+    return t
+
+tim.pensize(10)
+moves=["forward","right","left"]
+for i in range(1000):
+    tim.color(random_color())
+    move=random.choice(moves)
+    if move=="forward":
+        tim.forward(20)
+    elif move=="right":
+        tim.right(random.choice([0,90,180,270]))
+    else:
+        tim.left(random.choice([0,90,180,270]))
+
+
+
+screen=turtle.Screen()
+screen.exitonclick()

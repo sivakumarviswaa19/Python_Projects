@@ -1,0 +1,26 @@
+import turtle as t
+import random
+draw=t.Turtle()
+draw.shape("arrow")
+
+draw.speed("fastest")
+
+t.colormode(255)
+def random_color():
+    r=random.randint(0,255)
+    g=random.randint(0,255)
+    b=random.randint(0,255)
+    t=(r,g,b)
+    return t
+for i in range(72):
+    draw.color(random_color())
+    draw.circle(100)
+    draw.heading()
+    draw.setheading(draw.heading()+5)
+
+
+
+
+screen=t.Screen()
+
+screen.exitonclick()
